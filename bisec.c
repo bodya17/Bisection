@@ -59,7 +59,7 @@ int main()
 
 	double fc; // значення функції в середній точці інтервала [a, b]
 
-	printf("%sТабуляція:\n%s%-9s%-9s%-9s%-9s%-9s\n", GRN, RED, "#", "a", "b", "c", "fc");
+	printf("%sТабуляція:\n%s%-9s%-9s%-9s%-9s%-9s\n", GRN, RED, "#", "a", "b", "c", "f(c)");
 
 
 	do {
@@ -68,12 +68,12 @@ int main()
 
 		fc = f(c); // значення функції в точці c, де с = 0.5 * (a + b)
 
+		printf("%s%-9d%-9g%-9g%-9g%-9g\n", BCK, n, a, b, c, fc);
+
 		if ( f(b) * fc < 0 )
 			a = c;
 		else
 			b = c;
-
-		printf("%s%-9d%-9g%-9g%-9g%-9g\n", BCK, n, a, b, c, fc);
 
 	} while ( fabs(b - a) > eps && fabs(fc) > eps);
 
