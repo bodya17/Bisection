@@ -57,7 +57,7 @@ int main()
 
 		printf("%s%-9d%-9g%-9g%-9g%-9g\n", BCK, n, a, b, c, fc);
 
-	} while (b - a > eps && fc > eps);
+	} while (fabs(b - a) > eps && fabs(fc) > eps);
 
 	printf("%sКорінь: %s%g\n", GRN, RED, c);
 	printf("%sКількість ітерацій: %s%d\n\n", GRN, RED, n);
